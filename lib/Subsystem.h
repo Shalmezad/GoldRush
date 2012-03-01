@@ -6,13 +6,14 @@
     enum State{
         MAIN_MENU,
         LEVEL,
-        HIGHSCORE
+        HIGHSCORE,
+        EXIT
     };
 
 class Subsystem{
 public:
     Subsystem();
-    virtual void tick(SDL_Surface* screen);
+    virtual void tick();
     virtual State checkState();
     virtual int stateParam();
 };

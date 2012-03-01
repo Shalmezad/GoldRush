@@ -9,12 +9,14 @@ public:
     Level();
     ~Level();
 
-    virtual void tick(SDL_Surface* screen);
+    virtual void tick();
     virtual State checkState();
     virtual int stateParam();
 
 private:
+    State currentState;
 
+    void handleEvents();
 
 
 

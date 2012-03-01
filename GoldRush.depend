@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1330624754 source:/home/shalmezad/Programming/Git/GoldRush/lib/Game.cpp
+1330635779 source:/home/shalmezad/Programming/Git/GoldRush/lib/Game.cpp
 	"Game.h"
 
-1330626321 /home/shalmezad/Programming/Git/GoldRush/lib/Game.h
+1330635287 /home/shalmezad/Programming/Git/GoldRush/lib/Game.h
 	<SDL.h>
 	"Subsystem.h"
 	"Level.h"
@@ -187,19 +187,19 @@
 	"begin_code.h"
 	"close_code.h"
 
-1330624747 source:/home/shalmezad/Programming/Git/GoldRush/main.cpp
+1330635734 source:/home/shalmezad/Programming/Git/GoldRush/main.cpp
 	"lib/Game.h"
 
-1330625453 source:/home/shalmezad/Programming/Git/GoldRush/lib/Level.cpp
+1330635628 source:/home/shalmezad/Programming/Git/GoldRush/lib/Level.cpp
 	"Level.h"
 
-1330626052 /home/shalmezad/Programming/Git/GoldRush/lib/Level.h
+1330635509 /home/shalmezad/Programming/Git/GoldRush/lib/Level.h
 	<SDL.h>
 	"Subsystem.h"
 
-1330626302 /home/shalmezad/Programming/Git/GoldRush/lib/Subsystem.h
+1330635262 /home/shalmezad/Programming/Git/GoldRush/lib/Subsystem.h
 	<SDL.h>
 
-1330626312 source:/home/shalmezad/Programming/Git/GoldRush/lib/Subsystem.cpp
+1330634975 source:/home/shalmezad/Programming/Git/GoldRush/lib/Subsystem.cpp
 	"Subsystem.h"
 

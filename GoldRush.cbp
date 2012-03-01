@@ -35,6 +35,12 @@
 		<Linker>
 			<Add option="`sdl-config --libs`" />
 		</Linker>
+		<Unit filename="lib/Game.cpp" />
+		<Unit filename="lib/Game.h" />
+		<Unit filename="lib/Level.cpp" />
+		<Unit filename="lib/Level.h" />
+		<Unit filename="lib/Subsystem.cpp" />
+		<Unit filename="lib/Subsystem.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="res/cb.bmp" />
 		<Extensions>
