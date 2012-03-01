@@ -30,7 +30,7 @@ Game::Game(){
 
 }
 
-void Game::start(){
+void Game::run(){
     // program main loop
     bool done = false;
     while (!done)
