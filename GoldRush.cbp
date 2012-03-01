@@ -35,8 +35,8 @@
 		<Linker>
 			<Add option="`sdl-config --libs`" />
 		</Linker>
-		<Unit filename="cb.bmp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="res/cb.bmp" />
 		<Extensions>
 			<code_completion />
 			<debugger />
