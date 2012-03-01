@@ -7,6 +7,7 @@ Level::Level(SDL_Surface* s){
     currentState = LEVEL;
     m_Grid = new Grid();
     m_Background = new Background();
+    m_Conveyor = new Conveyor();
 }
 
 Level::~Level(){
@@ -17,6 +18,7 @@ void Level::tick(){
 
     m_Background->render(screen);
     m_Grid->render(screen);
+    m_Conveyor->render(screen);
     SDL_Flip(screen);
 
 }

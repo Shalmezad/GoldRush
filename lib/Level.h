@@ -5,6 +5,7 @@
 #include "Subsystem.h"
 #include "Grid.h"
 #include "Background.h"
+#include "Conveyor.h"
 
 class Level:public Subsystem{
 public:
@@ -19,6 +20,7 @@ private:
     State currentState;
     Grid* m_Grid;
     Background* m_Background;
+    Conveyor* m_Conveyor;
     SDL_Surface* screen;
 
     void handleEvents();

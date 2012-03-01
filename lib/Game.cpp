@@ -30,7 +30,7 @@ void Game::run(){
     while(running){
         //run current subsystem
         currentSystem->tick();
-
+        SDL_Delay(20);
 
         //check to make sure nothing has changed...
         if(currentSystem->checkState()!=currentState){
