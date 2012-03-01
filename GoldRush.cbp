@@ -29,19 +29,28 @@
 			</Target>
 		</Build>
 		<Compiler>
-			<Add option="`sdl-config --cflags`" />
 			<Add option="-Wall" />
+			<Add option="`sdl-config --cflags`" />
 		</Compiler>
 		<Linker>
 			<Add option="`sdl-config --libs`" />
+			<Add option="-lSDL_image" />
 		</Linker>
+		<Unit filename="lib/Background.cpp" />
+		<Unit filename="lib/Background.h" />
 		<Unit filename="lib/Game.cpp" />
 		<Unit filename="lib/Game.h" />
+		<Unit filename="lib/Grid.cpp" />
+		<Unit filename="lib/Grid.h" />
 		<Unit filename="lib/Level.cpp" />
 		<Unit filename="lib/Level.h" />
+		<Unit filename="lib/Resource.cpp" />
+		<Unit filename="lib/Resource.h" />
 		<Unit filename="lib/Subsystem.cpp" />
 		<Unit filename="lib/Subsystem.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="res/background.bmp" />
+		<Unit filename="res/grid.bmp" />
 		<Extensions>
 			<code_completion />
 			<debugger />
