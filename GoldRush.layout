@@ -2,24 +2,24 @@
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
 	<File name="lib/Game.cpp" open="1" top="0" tabpos="3">
-		<Cursor position="946" topLine="48" />
+		<Cursor position="34" topLine="1" />
 	</File>
-	<File name="lib/Game.h" open="1" top="1" tabpos="2">
-		<Cursor position="143" topLine="0" />
+	<File name="lib/Game.h" open="1" top="0" tabpos="2">
+		<Cursor position="139" topLine="0" />
 	</File>
 	<File name="lib/Level.cpp" open="1" top="0" tabpos="5">
-		<Cursor position="42" topLine="0" />
+		<Cursor position="64" topLine="0" />
 	</File>
-	<File name="lib/Level.h" open="1" top="0" tabpos="6">
-		<Cursor position="77" topLine="0" />
+	<File name="lib/Level.h" open="1" top="1" tabpos="6">
+		<Cursor position="231" topLine="0" />
 	</File>
 	<File name="lib/Subsystem.cpp" open="1" top="0" tabpos="7">
-		<Cursor position="101" topLine="0" />
+		<Cursor position="69" topLine="0" />
 	</File>
 	<File name="lib/Subsystem.h" open="1" top="0" tabpos="4">
-		<Cursor position="285" topLine="0" />
+		<Cursor position="294" topLine="0" />
 	</File>
 	<File name="main.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="106" topLine="0" />
+		<Cursor position="129" topLine="0" />
 	</File>
 </CodeBlocks_layout_file>

@@ -42,7 +42,6 @@
 		<Unit filename="lib/Subsystem.cpp" />
 		<Unit filename="lib/Subsystem.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="res/cb.bmp" />
 		<Extensions>
 			<code_completion />
 			<debugger />
