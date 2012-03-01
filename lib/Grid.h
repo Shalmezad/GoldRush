@@ -2,6 +2,7 @@
 #define _GRID_H_
 
 #include <SDL.h>
+#include "Resource.h"
 
 class Grid{
 public:

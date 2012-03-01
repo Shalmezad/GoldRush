@@ -2,18 +2,22 @@
 
 
 
-Level::Level(){
+Level::Level(SDL_Surface* s){
+    screen = s;
     currentState = LEVEL;
-
+    m_Grid = new Grid();
+    m_Background = new Background();
 }
 
 Level::~Level(){
-
+    delete(m_Grid);
 }
 void Level::tick(){
     handleEvents();
 
-
+    m_Background->render(screen);
+    m_Grid->render(screen);
+    SDL_Flip(screen);
 
 }
 

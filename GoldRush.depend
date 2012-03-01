@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1330635862 source:/home/shalmezad/Programming/Git/GoldRush/lib/Game.cpp
+1330642816 source:/home/shalmezad/Programming/Git/GoldRush/lib/Game.cpp
 	"Game.h"
 
 1330635287 /home/shalmezad/Programming/Git/GoldRush/lib/Game.h
@@ -190,16 +190,45 @@
 1330635734 source:/home/shalmezad/Programming/Git/GoldRush/main.cpp
 	"lib/Game.h"
 
-1330635628 source:/home/shalmezad/Programming/Git/GoldRush/lib/Level.cpp
+1330643228 source:/home/shalmezad/Programming/Git/GoldRush/lib/Level.cpp
 	"Level.h"
 
-1330635509 /home/shalmezad/Programming/Git/GoldRush/lib/Level.h
+1330643208 /home/shalmezad/Programming/Git/GoldRush/lib/Level.h
 	<SDL.h>
 	"Subsystem.h"
+	"Grid.h"
+	"Background.h"
 
 1330635262 /home/shalmezad/Programming/Git/GoldRush/lib/Subsystem.h
 	<SDL.h>
 
 1330634975 source:/home/shalmezad/Programming/Git/GoldRush/lib/Subsystem.cpp
 	"Subsystem.h"
+
+1330643021 source:/home/shalmezad/Programming/Git/GoldRush/lib/Grid.cpp
+	"Grid.h"
+
+1330643012 /home/shalmezad/Programming/Git/GoldRush/lib/Grid.h
+	<SDL.h>
+	"Resource.h"
+
+1330643650 source:/home/shalmezad/Programming/Git/GoldRush/lib/Resource.cpp
+	"Resource.h"
+
+1330643617 /home/shalmezad/Programming/Git/GoldRush/lib/Resource.h
+	<SDL.h>
+	<SDL_image.h>
+
+1330643192 /home/shalmezad/Programming/Git/GoldRush/lib/Background.h
+	<SDL.h>
+	"Resource.h"
+
+1330643185 source:/home/shalmezad/Programming/Git/GoldRush/lib/Background.cpp
+	"Background.h"
+
+1310091670 /usr/include/SDL/SDL_image.h
+	"SDL.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
 

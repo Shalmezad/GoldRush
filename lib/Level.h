@@ -3,10 +3,12 @@
 
 #include <SDL.h>
 #include "Subsystem.h"
+#include "Grid.h"
+#include "Background.h"
 
 class Level:public Subsystem{
 public:
-    Level();
+    Level(SDL_Surface* s);
     ~Level();
 
     virtual void tick();
@@ -15,9 +17,11 @@ public:
 
 private:
     State currentState;
+    Grid* m_Grid;
+    Background* m_Background;
+    SDL_Surface* screen;
 
     void handleEvents();
-
 
 
 };

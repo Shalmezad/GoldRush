@@ -17,7 +17,7 @@ Game::Game(){
 
 
     currentState = LEVEL;
-    currentSystem = new Level();
+    currentSystem = new Level(screen);
 
 
 }
