@@ -17,14 +17,15 @@ void Held::move(int x, int y){
 void Held::rotate(){
     if(holding){
         heldGroup->rotate();
+        //TODO: handle rotation and grabbed x/y better
+        grabbedx = 20;
+        grabbedy = 20;
     }
 }
 
 void Held::render(SDL_Surface* screen){
     if(holding){
-        //TODO:overlay
         heldGroup->renderOver(screen);
-
         heldGroup->render(screen,xpos-grabbedx,ypos-grabbedy);
     }
 }

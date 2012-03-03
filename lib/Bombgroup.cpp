@@ -76,7 +76,7 @@ int Bombgroup::round(double b){
     double d = b;
     int c = d;
     d = d-c;
-    if(d>.5){
+    if(d>=.5){
         return c + 1;
     }
     else{

@@ -7,28 +7,28 @@
 	<File name="lib/Background.h" open="0" top="0" tabpos="0">
 		<Cursor position="85" topLine="0" />
 	</File>
-	<File name="lib/Bomb.cpp" open="0" top="0" tabpos="4">
-		<Cursor position="433" topLine="0" />
+	<File name="lib/Bomb.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="436" topLine="0" />
 	</File>
 	<File name="lib/Bomb.h" open="0" top="0" tabpos="3">
-		<Cursor position="51" topLine="0" />
+		<Cursor position="219" topLine="0" />
 	</File>
-	<File name="lib/Bombgroup.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="2107" topLine="71" />
+	<File name="lib/Bombgroup.cpp" open="1" top="1" tabpos="3">
+		<Cursor position="1816" topLine="66" />
 	</File>
-	<File name="lib/Bombgroup.h" open="1" top="1" tabpos="2">
-		<Cursor position="401" topLine="0" />
+	<File name="lib/Bombgroup.h" open="0" top="0" tabpos="2">
+		<Cursor position="674" topLine="0" />
 	</File>
-	<File name="lib/Conveyor.cpp" open="1" top="0" tabpos="4">
-		<Cursor position="133" topLine="0" />
+	<File name="lib/Conveyor.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="593" topLine="14" />
 	</File>
-	<File name="lib/Conveyor.h" open="1" top="0" tabpos="5">
-		<Cursor position="353" topLine="0" />
+	<File name="lib/Conveyor.h" open="0" top="0" tabpos="5">
+		<Cursor position="664" topLine="0" />
 	</File>
-	<File name="lib/Game.cpp" open="0" top="0" tabpos="6">
-		<Cursor position="351" topLine="5" />
+	<File name="lib/Game.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="1066" topLine="18" />
 	</File>
-	<File name="lib/Game.h" open="1" top="0" tabpos="3">
+	<File name="lib/Game.h" open="0" top="0" tabpos="3">
 		<Cursor position="111" topLine="0" />
 	</File>
 	<File name="lib/Grid.cpp" open="0" top="0" tabpos="3">
@@ -38,13 +38,13 @@
 		<Cursor position="73" topLine="0" />
 	</File>
 	<File name="lib/Held.cpp" open="0" top="0" tabpos="9">
-		<Cursor position="153" topLine="0" />
+		<Cursor position="190" topLine="4" />
 	</File>
 	<File name="lib/Held.h" open="0" top="0" tabpos="0">
-		<Cursor position="194" topLine="0" />
+		<Cursor position="274" topLine="0" />
 	</File>
 	<File name="lib/Level.cpp" open="0" top="0" tabpos="5">
-		<Cursor position="1114" topLine="24" />
+		<Cursor position="1581" topLine="38" />
 	</File>
 	<File name="lib/Level.h" open="0" top="0" tabpos="8">
 		<Cursor position="176" topLine="0" />

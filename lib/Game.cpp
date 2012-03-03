@@ -15,6 +15,7 @@ Game::Game(){
         throw "Unable to create the window";
     }
 
+    SDL_WM_SetCaption("GoldRush",0);
 
     currentState = LEVEL;
     currentSystem = new Level(screen);
