@@ -14,7 +14,7 @@ Conveyor::Conveyor(){
     right_graphic4 = Resource::loadGraphic("res/belt2-4.bmp");
 
 
-
+    spawn_tick = 0;
     anim_state = 1;
     anim_tick = 0;
 }

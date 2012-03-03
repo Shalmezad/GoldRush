@@ -5,6 +5,7 @@
 #include <SDL.h>
 #include <time.h>
 #include "Bomb.h"
+#include "Resource.h"
 
 
 class Bombgroup{
@@ -13,6 +14,7 @@ public:
     ~Bombgroup();
     void render(SDL_Surface* screen);
     void render(SDL_Surface* screen, int x, int y);
+    void renderOver(SDL_Surface* screen);
     void rotate();
     void move(int x, int y);
     int getX(){return xpos;}
@@ -23,6 +25,9 @@ private:
     int xpos, ypos;
     std::vector<Bomb*> bombs;
     void randomBomb();
+    SDL_Surface* overgraphic;
     static bool seeded;
+
+    static int round(double b);
 };
 #endif

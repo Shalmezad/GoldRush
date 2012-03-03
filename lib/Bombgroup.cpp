@@ -26,7 +26,7 @@ Bombgroup::Bombgroup(int type){
     for(int i=0; i<numBombs; i++){
         randomBomb();   //add random bomb to array
     }
-
+    overgraphic = Resource::loadGraphic("res/over.bmp");
 }
 
 void Bombgroup::randomBomb(){
@@ -51,6 +51,37 @@ bool Bombgroup::checkCollision(int px, int py){
         }
     }
     return flag;
+}
+
+void Bombgroup::renderOver(SDL_Surface* screen){
+    for(int a=0; a<bombs.size(); a++){
+        int x = bombs[a]->getX();
+        int y = bombs[a]->getY();
+        x = round(x/40.0) * 40.0;
+        y = round(y/40.0) * 40.0;
+        SDL_Rect pos;
+        pos.x = x;
+        pos.y = y;
+        if(x>=200 && x<520){
+            if(y>=80 && y<400){
+                SDL_BlitSurface(overgraphic, NULL, screen, &pos);
+            }
+        }
+    }
+
+}
+
+
+int Bombgroup::round(double b){
+    double d = b;
+    int c = d;
+    d = d-c;
+    if(d>.5){
+        return c + 1;
+    }
+    else{
+        return c;
+    }
 }
 
 void Bombgroup::rotate(){
@@ -105,6 +136,7 @@ Bombgroup::~Bombgroup(){
     for(int a=0; a<bombs.size(); a++){
         delete(bombs[a]);
     }
+    SDL_FreeSurface(overgraphic);
 }
 
 

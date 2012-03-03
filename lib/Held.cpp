@@ -22,6 +22,9 @@ void Held::rotate(){
 
 void Held::render(SDL_Surface* screen){
     if(holding){
+        //TODO:overlay
+        heldGroup->renderOver(screen);
+
         heldGroup->render(screen,xpos-grabbedx,ypos-grabbedy);
     }
 }
