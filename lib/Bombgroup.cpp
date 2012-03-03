@@ -1,10 +1,15 @@
 #include "Bombgroup.h"
 
+bool Bombgroup::seeded = false;
+
 Bombgroup::Bombgroup(int type){
     grouptype = type;
     xpos = 0;
     ypos = 0;
-    srand ( time(NULL) );
+    if(!seeded){
+        srand ( time(NULL) );
+        seeded = true;
+    }
     int numBombs;
     if(type == 1){
         numBombs = 1;
@@ -28,6 +33,24 @@ void Bombgroup::randomBomb(){
     int a = rand() % 4 + 1;
     Bomb* b = new Bomb(a);
     bombs.push_back(b);
+}
+
+bool Bombgroup::checkCollision(int px, int py){
+
+    //need to go through each bomb position, and check to see if they collided
+    bool flag = false;
+    move(xpos, ypos);
+    for(int a=0; a<bombs.size(); a++){
+        int xpos = bombs[a]->getX();
+        int ypos = bombs[a]->getY();
+        //check to see if the point is in the bomb graphic
+        if(px>xpos && px<(xpos+40)){
+            if(py>ypos && py<(ypos+40)){
+                flag = true;
+            }
+        }
+    }
+    return flag;
 }
 
 void Bombgroup::rotate(){
@@ -85,70 +108,78 @@ Bombgroup::~Bombgroup(){
 }
 
 
+void Bombgroup::move(int x, int y){
+    xpos = x;
+    ypos = y;
+    switch(grouptype){
+        case 1:
+            bombs[0]->move(x,y);
+            break;
+        case 2:
+            //line of 2 horizontally.
+            bombs[0]->move(x,y);
+            bombs[1]->move(x+40, y);
+            break;
+        case 3:
+            //line of 2 vertically
+            bombs[0]->move(x,y);
+            bombs[1]->move(x,y+40);
+            break;
+        case 4:
+            //line of 3 horizontally
+            bombs[0]->move(x,y);
+            bombs[1]->move(x+40, y);
+            bombs[2]->move(x+80, y);
+            break;
+        case 5:
+            //line of 3 vertically
+            bombs[0]->move(x,y);
+            bombs[1]->move(x,y+40);
+            bombs[2]->move(x,y+80);
+            break;
+        case 6:
+            //3 in L, no rotation
+            bombs[0]->move(x,y);
+            bombs[1]->move(x,y+40);
+            bombs[2]->move(x+40,y+40);
+            break;
+        case 7:
+            //3 in L, 90 rotation
+            bombs[0]->move(x+40,y);
+            bombs[1]->move(x,y);
+            bombs[2]->move(x,y+40);
+            break;
+        case 8:
+            //3 in L, 180 rotation
+            bombs[0]->move(x+40,y+40);
+            bombs[1]->move(x+40,y);
+            bombs[2]->move(x,y);
+            break;
+        case 9:
+            //3 in L, 270 rotation
+            bombs[0]->move(x,y+40);
+            bombs[1]->move(x+40,y+40);
+            bombs[2]->move(x+40,y);
+            break;
+        case 10:
+            //3 in L, 90 rotation
+            bombs[0]->move(x,y);
+            bombs[1]->move(x,y+40);
+            bombs[2]->move(x+40,y+40);
+            bombs[3]->move(x+40,y);
+            break;
+
+    }
+}
+
 void Bombgroup::render(SDL_Surface* screen){
     render(screen, xpos, ypos);
 }
 
 void Bombgroup::render(SDL_Surface* screen, int x, int y){
-    //TODO:render properly based on type
-    switch(grouptype){
-        case 1:
-            //single dot, very easy to do
-            bombs[0]->render(screen,x,y);
-            break;
-        case 2:
-            //line of 2 horizontally.
-            bombs[0]->render(screen,x,y);
-            bombs[1]->render(screen,x+40, y);
-            break;
-        case 3:
-            //line of 2 vertically
-            bombs[0]->render(screen,x,y);
-            bombs[1]->render(screen,x,y+40);
-            break;
-        case 4:
-            //line of 3 horizontally
-            bombs[0]->render(screen,x,y);
-            bombs[1]->render(screen,x+40, y);
-            bombs[2]->render(screen,x+80, y);
-            break;
-        case 5:
-            //line of 3 vertically
-            bombs[0]->render(screen,x,y);
-            bombs[1]->render(screen,x,y+40);
-            bombs[2]->render(screen,x,y+80);
-            break;
-        case 6:
-            //3 in L, no rotation
-            bombs[0]->render(screen,x,y);
-            bombs[1]->render(screen,x,y+40);
-            bombs[2]->render(screen,x+40,y+40);
-            break;
-        case 7:
-            //3 in L, 90 rotation
-            bombs[0]->render(screen,x+40,y);
-            bombs[1]->render(screen,x,y);
-            bombs[2]->render(screen,x,y+40);
-            break;
-        case 8:
-            //3 in L, 180 rotation
-            bombs[0]->render(screen,x+40,y+40);
-            bombs[1]->render(screen,x+40,y);
-            bombs[2]->render(screen,x,y);
-            break;
-        case 9:
-            //3 in L, 270 rotation
-            bombs[0]->render(screen,x,y+40);
-            bombs[1]->render(screen,x+40,y+40);
-            bombs[2]->render(screen,x+40,y);
-            break;
-        case 10:
-            //3 in L, 90 rotation
-            bombs[0]->render(screen,x,y);
-            bombs[1]->render(screen,x,y+40);
-            bombs[2]->render(screen,x+40,y+40);
-            bombs[3]->render(screen,x+40,y);
-            break;
+    move(x,y);
+    for(int a=0; a<bombs.size(); a++){
+        bombs[a]->render(screen);
     }
 }
 

@@ -6,7 +6,8 @@ SDL_Surface* Bomb::bomb3 = NULL;
 SDL_Surface* Bomb::bomb4 = NULL;
 
 Bomb::Bomb(int type){
-
+    xpos = 0;
+    ypos = 0;
     bombtype = type;
 }
 
@@ -22,7 +23,12 @@ void Bomb::unloadGraphics(){
     SDL_FreeSurface(bomb3);
     SDL_FreeSurface(bomb4);
 }
+void Bomb::render(SDL_Surface* screen){
+    render(screen, xpos, ypos);
+}
 void Bomb::render(SDL_Surface* screen, int x, int y){
+    xpos = x;
+    ypos = y;
     Bomb::render(bombtype, screen, x, y);
 }
 void Bomb::render(int type, SDL_Surface* screen, int x, int y){

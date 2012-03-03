@@ -5,8 +5,8 @@ Held::Held(){
     ypos = 0;
     grabbedx = 40;
     grabbedy = 40;
-    heldGroup = new Bombgroup(10);
-    holding = true;
+    heldGroup = NULL;
+    holding = false;
 
 }
 
@@ -24,4 +24,14 @@ void Held::render(SDL_Surface* screen){
     if(holding){
         heldGroup->render(screen,xpos-grabbedx,ypos-grabbedy);
     }
+}
+
+void Held::grab(Bombgroup* b, int mx, int my ){
+    if(b != NULL){
+        holding = true;
+        heldGroup = b;
+        grabbedx = mx-heldGroup->getX();
+        grabbedy = my-heldGroup->getY();
+    }
+
 }

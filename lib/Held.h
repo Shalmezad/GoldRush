@@ -11,6 +11,8 @@ public:
     void move(int x, int y);
     void render(SDL_Surface* screen);
     void rotate();
+    void grab(Bombgroup* b, int mx, int my);
+    bool isHeld(){return holding;}
 private:
     int xpos;
     int ypos;

@@ -15,11 +15,14 @@ public:
     void render(SDL_Surface* screen, int x, int y);
     void rotate();
     void move(int x, int y);
+    int getX(){return xpos;}
+    int getY(){return ypos;}
+    bool checkCollision(int px, int py);
 private:
     int grouptype;
     int xpos, ypos;
     std::vector<Bomb*> bombs;
-
     void randomBomb();
+    static bool seeded;
 };
 #endif

@@ -191,7 +191,7 @@
 1330635734 source:/home/shalmezad/Programming/Git/GoldRush/main.cpp
 	"lib/Game.h"
 
-1330734322 source:/home/shalmezad/Programming/Git/GoldRush/lib/Level.cpp
+1330804466 source:/home/shalmezad/Programming/Git/GoldRush/lib/Level.cpp
 	"Level.h"
 
 1330733521 /home/shalmezad/Programming/Git/GoldRush/lib/Level.h
@@ -236,33 +236,36 @@
 	"begin_code.h"
 	"close_code.h"
 
-1330646099 /home/shalmezad/Programming/Git/GoldRush/lib/Conveyor.h
+1330805153 /home/shalmezad/Programming/Git/GoldRush/lib/Conveyor.h
 	<SDL.h>
+	<vector>
+	<iostream>
+	"Bombgroup.h"
 	"Resource.h"
 
-1330646176 source:/home/shalmezad/Programming/Git/GoldRush/lib/Conveyor.cpp
+1330804524 source:/home/shalmezad/Programming/Git/GoldRush/lib/Conveyor.cpp
 	"Conveyor.h"
 
-1330734522 source:/home/shalmezad/Programming/Git/GoldRush/lib/Bombgroup.cpp
+1330805080 source:/home/shalmezad/Programming/Git/GoldRush/lib/Bombgroup.cpp
 	"Bombgroup.h"
 
-1330736627 /home/shalmezad/Programming/Git/GoldRush/lib/Bombgroup.h
+1330803222 /home/shalmezad/Programming/Git/GoldRush/lib/Bombgroup.h
 	<vector>
 	<SDL.h>
 	<time.h>
 	"Bomb.h"
 
-1330734504 source:/home/shalmezad/Programming/Git/GoldRush/lib/Bomb.cpp
+1330803488 source:/home/shalmezad/Programming/Git/GoldRush/lib/Bomb.cpp
 	"Bomb.h"
 
-1330734522 /home/shalmezad/Programming/Git/GoldRush/lib/Bomb.h
+1330803463 /home/shalmezad/Programming/Git/GoldRush/lib/Bomb.h
 	<SDL.h>
 	"Resource.h"
 
-1330733964 /home/shalmezad/Programming/Git/GoldRush/lib/Held.h
+1330804442 /home/shalmezad/Programming/Git/GoldRush/lib/Held.h
 	<SDL.h>
 	"Bombgroup.h"
 
-1330736244 source:/home/shalmezad/Programming/Git/GoldRush/lib/Held.cpp
+1330804006 source:/home/shalmezad/Programming/Git/GoldRush/lib/Held.cpp
 	"Held.h"
 

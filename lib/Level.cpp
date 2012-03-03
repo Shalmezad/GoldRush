@@ -19,6 +19,7 @@ Level::~Level(){
 }
 void Level::tick(){
     handleEvents();
+    m_Conveyor->tick();
     render();
 }
 
@@ -50,6 +51,15 @@ void Level::handleEvents(){
         else if(event.type == SDL_MOUSEBUTTONDOWN){
             if(event.button.button == SDL_BUTTON_RIGHT ){
                 m_Held->rotate();
+            }
+            if(event.button.button == SDL_BUTTON_LEFT){
+                if(!m_Held->isHeld()){
+                    Bombgroup* b;
+                    b = m_Conveyor->checkClick(event.button.x, event.button.y);
+                    if(b!=NULL){
+                        m_Held->grab(b, event.button.x, event.button.y);
+                    }
+                }
             }
         }
     }
