@@ -48,6 +48,8 @@
 		<Unit filename="lib/Game.h" />
 		<Unit filename="lib/Grid.cpp" />
 		<Unit filename="lib/Grid.h" />
+		<Unit filename="lib/Held.cpp" />
+		<Unit filename="lib/Held.h" />
 		<Unit filename="lib/Level.cpp" />
 		<Unit filename="lib/Level.h" />
 		<Unit filename="lib/Resource.cpp" />
@@ -60,6 +62,10 @@
 		<Unit filename="res/belt1-2.bmp" />
 		<Unit filename="res/belt1-3.bmp" />
 		<Unit filename="res/belt1-4.bmp" />
+		<Unit filename="res/bomb1.bmp" />
+		<Unit filename="res/bomb2.bmp" />
+		<Unit filename="res/bomb3.bmp" />
+		<Unit filename="res/bomb4.bmp" />
 		<Unit filename="res/grid.bmp" />
 		<Extensions>
 			<code_completion />

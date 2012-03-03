@@ -2,6 +2,9 @@
 
 Bombgroup::Bombgroup(int type){
     grouptype = type;
+    xpos = 0;
+    ypos = 0;
+    srand ( time(NULL) );
     int numBombs;
     if(type == 1){
         numBombs = 1;
@@ -76,6 +79,14 @@ void Bombgroup::rotate(){
 
 Bombgroup::~Bombgroup(){
     //TODO: remove vector, and bombs in vector
+    for(int a=0; a<bombs.size(); a++){
+        delete(bombs[a]);
+    }
+}
+
+
+void Bombgroup::render(SDL_Surface* screen){
+    render(screen, xpos, ypos);
 }
 
 void Bombgroup::render(SDL_Surface* screen, int x, int y){

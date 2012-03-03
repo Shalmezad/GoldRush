@@ -48,7 +48,7 @@ void Level::handleEvents(){
             m_Held->move(event.motion.x, event.motion.y);
         }
         else if(event.type == SDL_MOUSEBUTTONDOWN){
-            if(event.button.button == SDL_BUTTON_LEFT ){
+            if(event.button.button == SDL_BUTTON_RIGHT ){
                 m_Held->rotate();
             }
         }

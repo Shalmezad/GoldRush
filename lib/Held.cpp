@@ -3,8 +3,8 @@
 Held::Held(){
     xpos = 0;
     ypos = 0;
-    grabbedx = 20;
-    grabbedy = 20;
+    grabbedx = 40;
+    grabbedy = 40;
     heldGroup = new Bombgroup(10);
     holding = true;
 

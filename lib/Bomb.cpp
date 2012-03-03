@@ -6,6 +6,7 @@ SDL_Surface* Bomb::bomb3 = NULL;
 SDL_Surface* Bomb::bomb4 = NULL;
 
 Bomb::Bomb(int type){
+
     bombtype = type;
 }
 
