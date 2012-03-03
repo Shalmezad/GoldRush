@@ -4,6 +4,7 @@
 #include <SDL.h>
 #include "Subsystem.h"
 #include "Level.h"
+#include "Bomb.h"
 
 class Game{
 public:

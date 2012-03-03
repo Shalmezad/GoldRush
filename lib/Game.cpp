@@ -19,10 +19,11 @@ Game::Game(){
     currentState = LEVEL;
     currentSystem = new Level(screen);
 
-
+    Bomb::loadGraphics();
 }
 
 Game::~Game(){
+    Bomb::unloadGraphics();
 }
 
 void Game::run(){

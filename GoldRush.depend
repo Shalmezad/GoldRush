@@ -1,11 +1,12 @@
 # depslib dependency file v1.0
-1330645037 source:/home/shalmezad/Programming/Git/GoldRush/lib/Game.cpp
+1330729211 source:/home/shalmezad/Programming/Git/GoldRush/lib/Game.cpp
 	"Game.h"
 
-1330635287 /home/shalmezad/Programming/Git/GoldRush/lib/Game.h
+1330729418 /home/shalmezad/Programming/Git/GoldRush/lib/Game.h
 	<SDL.h>
 	"Subsystem.h"
 	"Level.h"
+	"Bomb.h"
 
 1309959003 /usr/include/SDL/SDL.h
 	"SDL_main.h"
@@ -190,15 +191,17 @@
 1330635734 source:/home/shalmezad/Programming/Git/GoldRush/main.cpp
 	"lib/Game.h"
 
-1330646067 source:/home/shalmezad/Programming/Git/GoldRush/lib/Level.cpp
+1330733993 source:/home/shalmezad/Programming/Git/GoldRush/lib/Level.cpp
 	"Level.h"
 
-1330646046 /home/shalmezad/Programming/Git/GoldRush/lib/Level.h
+1330733521 /home/shalmezad/Programming/Git/GoldRush/lib/Level.h
 	<SDL.h>
 	"Subsystem.h"
 	"Grid.h"
 	"Background.h"
 	"Conveyor.h"
+	"Bomb.h"
+	"Held.h"
 
 1330635262 /home/shalmezad/Programming/Git/GoldRush/lib/Subsystem.h
 	<SDL.h>
@@ -236,4 +239,29 @@
 1330646099 /home/shalmezad/Programming/Git/GoldRush/lib/Conveyor.h
 	<SDL.h>
 	"Resource.h"
+
+1330646176 source:/home/shalmezad/Programming/Git/GoldRush/lib/Conveyor.cpp
+	"Conveyor.h"
+
+1330732613 source:/home/shalmezad/Programming/Git/GoldRush/lib/Bombgroup.cpp
+	"Bombgroup.h"
+
+1330731667 /home/shalmezad/Programming/Git/GoldRush/lib/Bombgroup.h
+	<vector>
+	<SDL.h>
+	"Bomb.h"
+
+1330729396 source:/home/shalmezad/Programming/Git/GoldRush/lib/Bomb.cpp
+	"Bomb.h"
+
+1330729382 /home/shalmezad/Programming/Git/GoldRush/lib/Bomb.h
+	<SDL.h>
+	"Resource.h"
+
+1330733964 /home/shalmezad/Programming/Git/GoldRush/lib/Held.h
+	<SDL.h>
+	"Bombgroup.h"
+
+1330734063 source:/home/shalmezad/Programming/Git/GoldRush/lib/Held.cpp
+	"Held.h"
 

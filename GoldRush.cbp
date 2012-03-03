@@ -38,6 +38,12 @@
 		</Linker>
 		<Unit filename="lib/Background.cpp" />
 		<Unit filename="lib/Background.h" />
+		<Unit filename="lib/Bomb.cpp" />
+		<Unit filename="lib/Bomb.h" />
+		<Unit filename="lib/Bombgroup.cpp" />
+		<Unit filename="lib/Bombgroup.h" />
+		<Unit filename="lib/Conveyor.cpp" />
+		<Unit filename="lib/Conveyor.h" />
 		<Unit filename="lib/Game.cpp" />
 		<Unit filename="lib/Game.h" />
 		<Unit filename="lib/Grid.cpp" />
@@ -50,6 +56,10 @@
 		<Unit filename="lib/Subsystem.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="res/background.bmp" />
+		<Unit filename="res/belt1-1.bmp" />
+		<Unit filename="res/belt1-2.bmp" />
+		<Unit filename="res/belt1-3.bmp" />
+		<Unit filename="res/belt1-4.bmp" />
 		<Unit filename="res/grid.bmp" />
 		<Extensions>
 			<code_completion />
