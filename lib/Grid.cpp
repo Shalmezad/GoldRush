@@ -43,10 +43,58 @@ int Grid::round(double b){
     }
 }
 
+void Grid::checkMatches(){
+    bool matches[8][8];
+    for(int i=0; i<8; i++){
+        for(int j=0; j<8; j++){
+            matches[i][j] = false;
+        }
+    }
+
+    //check horizontal matches
+    for(int i=0; i<6; i++){
+        for(int j=0; j<8; j++){
+            if(bombgrid[i][j] != 0){
+                if(bombgrid[i][j] == bombgrid[i+1][j] &&
+                   bombgrid[i][j] == bombgrid[i+2][j]){
+                    matches[i][j] = true;
+                    matches[i+1][j] = true;
+                    matches[i+2][j] = true;
+                }
+            }
+        }
+    }
+
+
+    //check vertical matches
+    for(int i=0; i<8; i++){
+        for(int j=0; j<6; j++){
+            if(bombgrid[i][j] != 0){
+                if(bombgrid[i][j] == bombgrid[i][j+1] &&
+                   bombgrid[i][j] == bombgrid[i][j+2]){
+                    matches[i][j] = true;
+                    matches[i][j+1] = true;
+                    matches[i][j+2] = true;
+                }
+            }
+        }
+    }
+
+    //for now, remove
+    //TODO: use to remove rocks behind
+    for(int i=0; i<8; i++){
+        for(int j=0; j<8; j++){
+            if(matches[i][j]){
+                bombgrid[i][j] = 0;
+            }
+        }
+    }
+
+}
+
 bool Grid::play(Bombgroup* b){
-    //TODO: actually code this instead of cheating.
-    /*delete(b);
-    return true;*/
+    //TODO: check for matches if it was played.
+    //should rely on level for this (if true, call Grid::checkMatches)
 
     bool flag = true; //can play until proven otherwise
     std::vector<Bomb*> bombs = b->getBombs();

@@ -63,9 +63,12 @@ void Level::handleEvents(){
             }
         }
         else if(event.type == SDL_MOUSEBUTTONUP){
-            if(m_Held->isHeld()){
-                if(m_Grid->play(m_Held->getGroup())){
-                    m_Held->release();
+            if(event.button.button == SDL_BUTTON_LEFT){
+                if(m_Held->isHeld()){
+                    if(m_Grid->play(m_Held->getGroup())){
+                        m_Held->release();
+                        m_Grid->checkMatches();
+                    }
                 }
             }
         }

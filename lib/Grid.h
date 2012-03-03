@@ -13,6 +13,7 @@ public:
     ~Grid();
     void render(SDL_Surface* screen);
     bool play(Bombgroup* b);
+    void checkMatches();
 private:
     int bombgrid[8][8];
     SDL_Surface* grid_graphic;
