@@ -62,6 +62,13 @@ void Level::handleEvents(){
                 }
             }
         }
+        else if(event.type == SDL_MOUSEBUTTONUP){
+            if(m_Held->isHeld()){
+                if(m_Grid->play(m_Held->getGroup())){
+                    m_Held->release();
+                }
+            }
+        }
     }
 }
 

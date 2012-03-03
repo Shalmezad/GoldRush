@@ -12,6 +12,8 @@ public:
     void render(SDL_Surface* screen);
     void rotate();
     void grab(Bombgroup* b, int mx, int my);
+    void release(){holding = false; heldGroup = NULL;}
+    Bombgroup* getGroup(){return heldGroup;}
     bool isHeld(){return holding;}
 private:
     int xpos;
