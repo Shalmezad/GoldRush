@@ -14,6 +14,7 @@ public:
     void render(SDL_Surface* screen, int x, int y);
     int getX(){return xpos;}
     int getY(){return ypos;}
+    int getType(){return bombtype;}
     void move(int x, int y){xpos = x; ypos = y;}
     static void render(int type, SDL_Surface* screen, int x, int y);
 

@@ -2,6 +2,7 @@
 #define _GRID_H_
 
 #include <SDL.h>
+#include <vector>
 #include "Resource.h"
 #include "Bomb.h"
 #include "Bombgroup.h"
@@ -15,6 +16,8 @@ public:
 private:
     int bombgrid[8][8];
     SDL_Surface* grid_graphic;
+
+    int round(double b);
 
 };
 #endif

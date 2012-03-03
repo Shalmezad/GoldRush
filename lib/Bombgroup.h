@@ -20,6 +20,7 @@ public:
     int getX(){return xpos;}
     int getY(){return ypos;}
     bool checkCollision(int px, int py);
+    std::vector<Bomb*> getBombs(){return bombs;}
 private:
     int grouptype;
     int xpos, ypos;
