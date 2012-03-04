@@ -30,6 +30,7 @@ void Level::tick(){
 
 void Level::render(){
     m_Background->render(screen);
+    Score::render(screen);
     m_Rocks->render(screen);
     m_Grid->render(screen);
     m_Conveyor->render(screen);

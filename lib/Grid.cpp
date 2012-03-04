@@ -63,6 +63,7 @@ bool** Grid::checkMatches(){
                     matchgrid[i][j] = true;
                     matchgrid[i+1][j] = true;
                     matchgrid[i+2][j] = true;
+                    Score::addScore(3);
                 }
             }
         }
@@ -78,6 +79,7 @@ bool** Grid::checkMatches(){
                     matchgrid[i][j] = true;
                     matchgrid[i][j+1] = true;
                     matchgrid[i][j+2] = true;
+                    Score::addScore(3);
                 }
             }
         }

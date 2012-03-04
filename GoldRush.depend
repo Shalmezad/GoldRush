@@ -1,13 +1,14 @@
 # depslib dependency file v1.0
-1330893362 source:/home/shalmezad/Programming/Git/GoldRush/lib/Game.cpp
+1330896996 source:/home/shalmezad/Programming/Git/GoldRush/lib/Game.cpp
 	"Game.h"
 
-1330893284 /home/shalmezad/Programming/Git/GoldRush/lib/Game.h
+1330897020 /home/shalmezad/Programming/Git/GoldRush/lib/Game.h
 	<SDL.h>
 	"Subsystem.h"
 	"Level.h"
 	"Bomb.h"
 	"Rock.h"
+	"Score.h"
 
 1309959003 /usr/include/SDL/SDL.h
 	"SDL_main.h"
@@ -192,10 +193,10 @@
 1330635734 source:/home/shalmezad/Programming/Git/GoldRush/main.cpp
 	"lib/Game.h"
 
-1330893378 source:/home/shalmezad/Programming/Git/GoldRush/lib/Level.cpp
+1330897045 source:/home/shalmezad/Programming/Git/GoldRush/lib/Level.cpp
 	"Level.h"
 
-1330870098 /home/shalmezad/Programming/Git/GoldRush/lib/Level.h
+1330897013 /home/shalmezad/Programming/Git/GoldRush/lib/Level.h
 	<SDL.h>
 	"Subsystem.h"
 	"Grid.h"
@@ -204,6 +205,7 @@
 	"Bomb.h"
 	"Held.h"
 	"Rocks.h"
+	"Score.h"
 
 1330893311 /home/shalmezad/Programming/Git/GoldRush/lib/Subsystem.h
 	<SDL.h>
@@ -214,12 +216,13 @@
 1330872514 source:/home/shalmezad/Programming/Git/GoldRush/lib/Grid.cpp
 	"Grid.h"
 
-1330872435 /home/shalmezad/Programming/Git/GoldRush/lib/Grid.h
+1330897566 /home/shalmezad/Programming/Git/GoldRush/lib/Grid.h
 	<SDL.h>
 	<vector>
 	"Resource.h"
 	"Bomb.h"
 	"Bombgroup.h"
+	"Score.h"
 
 1330643650 source:/home/shalmezad/Programming/Git/GoldRush/lib/Resource.cpp
 	"Resource.h"
@@ -251,7 +254,7 @@
 1330891923 source:/home/shalmezad/Programming/Git/GoldRush/lib/Conveyor.cpp
 	"Conveyor.h"
 
-1330883049 source:/home/shalmezad/Programming/Git/GoldRush/lib/Bombgroup.cpp
+1330895255 source:/home/shalmezad/Programming/Git/GoldRush/lib/Bombgroup.cpp
 	"Bombgroup.h"
 
 1330810977 /home/shalmezad/Programming/Git/GoldRush/lib/Bombgroup.h
@@ -282,10 +285,18 @@
 	<SDL.h>
 	"Resource.h"
 
-1330875528 source:/home/shalmezad/Programming/Git/GoldRush/lib/Rocks.cpp
+1330893487 source:/home/shalmezad/Programming/Git/GoldRush/lib/Rocks.cpp
 	"Rocks.h"
 
 1330872547 /home/shalmezad/Programming/Git/GoldRush/lib/Rocks.h
 	<vector>
 	"Rock.h"
+
+1330897530 source:/home/shalmezad/Programming/Git/GoldRush/lib/Score.cpp
+	"Score.h"
+
+1330897427 /home/shalmezad/Programming/Git/GoldRush/lib/Score.h
+	<SDL.h>
+	<math.h>
+	"Resource.h"
 

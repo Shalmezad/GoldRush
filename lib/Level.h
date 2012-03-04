@@ -9,6 +9,7 @@
 #include "Bomb.h"
 #include "Held.h"
 #include "Rocks.h"
+#include "Score.h"
 
 class Level:public Subsystem{
 public:

@@ -6,6 +6,7 @@
 #include "Level.h"
 #include "Bomb.h"
 #include "Rock.h"
+#include "Score.h"
 
 class Game{
 public:

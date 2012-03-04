@@ -6,6 +6,7 @@
 #include "Resource.h"
 #include "Bomb.h"
 #include "Bombgroup.h"
+#include "Score.h"
 
 class Grid{
 public:

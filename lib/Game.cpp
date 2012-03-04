@@ -22,11 +22,13 @@ Game::Game(){
 
     Bomb::loadGraphics();
     Rock::loadGraphics();
+    Score::loadGraphics();
 }
 
 Game::~Game(){
     Bomb::unloadGraphics();
     Rock::unloadGraphics();
+    Score::unloadGraphics();
 }
 
 void Game::run(){
