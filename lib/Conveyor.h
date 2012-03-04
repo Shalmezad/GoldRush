@@ -12,7 +12,7 @@ public:
     Conveyor();
     ~Conveyor();
     void render(SDL_Surface* screen);
-    void tick();
+    bool tick();
     Bombgroup* checkClick(int xp, int yp);
 private:
     SDL_Surface* down_graphic1;
@@ -24,6 +24,8 @@ private:
     SDL_Surface* right_graphic2;
     SDL_Surface* right_graphic3;
     SDL_Surface* right_graphic4;
+
+    SDL_Surface* endbox;
 
     std::vector<Bombgroup*> bombs;
 

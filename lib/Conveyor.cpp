@@ -13,6 +13,7 @@ Conveyor::Conveyor(){
     right_graphic3 = Resource::loadGraphic("res/belt2-3.bmp");
     right_graphic4 = Resource::loadGraphic("res/belt2-4.bmp");
 
+    endbox = Resource::loadGraphic("res/box.bmp");
 
     spawn_tick = 0;
     anim_state = 1;
@@ -29,16 +30,15 @@ Conveyor::~Conveyor(){
     SDL_FreeSurface(right_graphic2);
     SDL_FreeSurface(right_graphic3);
     SDL_FreeSurface(right_graphic4);
+
+    SDL_FreeSurface(endbox);
 }
 
 Bombgroup* Conveyor::checkClick(int xp, int yp){
     Bombgroup* temp = NULL;
-    for(int a=0; a<bombs.size(); a++){
+    for(int a=bombs.size()-1; a>=0; a--){
         if(bombs[a]->checkCollision(xp, yp)){
-            //std::cout<<"click!\n";
-            //it collided...
             temp = bombs[a];
-            // erase the 6th element
             bombs.erase (bombs.begin()+a);
         }
     }
@@ -46,7 +46,8 @@ Bombgroup* Conveyor::checkClick(int xp, int yp){
 }
 
 
-void Conveyor::tick(){
+bool Conveyor::tick(){
+    bool dead = false;
     //Move pieces
     for(int a=0; a<bombs.size(); a++){
         //need to move each piece
@@ -57,6 +58,10 @@ void Conveyor::tick(){
         }
         else if(x<540){
             x = x + 1;
+        }
+        //if any bomb goes into the box...
+        if(x>=520){
+            dead = true;
         }
         bombs[a]->move(x,y);
     }
@@ -78,7 +83,7 @@ void Conveyor::tick(){
             bombs.push_back(b);
         }
     }
-
+    return dead;
 }
 
 void Conveyor::render(SDL_Surface* screen){
@@ -113,6 +118,13 @@ void Conveyor::render(SDL_Surface* screen){
             anim_state = 1;
         }
     }
+
+    //display box
+    SDL_Rect boxpos;
+    boxpos.x = 520;
+    boxpos.y = 420;
+
+    SDL_BlitSurface(endbox, NULL,screen, &boxpos);
 
     //display bomb groups
     for(int a=0; a<bombs.size(); a++){

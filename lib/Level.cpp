@@ -21,7 +21,10 @@ Level::~Level(){
 }
 void Level::tick(){
     handleEvents();
-    m_Conveyor->tick();
+    if(m_Conveyor->tick()){
+        //Game over
+        currentState = EXIT;
+    }
     render();
 }
 
