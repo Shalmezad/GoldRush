@@ -1,12 +1,13 @@
 # depslib dependency file v1.0
-1330807766 source:/home/shalmezad/Programming/Git/GoldRush/lib/Game.cpp
+1330869429 source:/home/shalmezad/Programming/Git/GoldRush/lib/Game.cpp
 	"Game.h"
 
-1330729418 /home/shalmezad/Programming/Git/GoldRush/lib/Game.h
+1330869523 /home/shalmezad/Programming/Git/GoldRush/lib/Game.h
 	<SDL.h>
 	"Subsystem.h"
 	"Level.h"
 	"Bomb.h"
+	"Rock.h"
 
 1309959003 /usr/include/SDL/SDL.h
 	"SDL_main.h"
@@ -191,10 +192,10 @@
 1330635734 source:/home/shalmezad/Programming/Git/GoldRush/main.cpp
 	"lib/Game.h"
 
-1330810006 source:/home/shalmezad/Programming/Git/GoldRush/lib/Level.cpp
+1330875395 source:/home/shalmezad/Programming/Git/GoldRush/lib/Level.cpp
 	"Level.h"
 
-1330733521 /home/shalmezad/Programming/Git/GoldRush/lib/Level.h
+1330870098 /home/shalmezad/Programming/Git/GoldRush/lib/Level.h
 	<SDL.h>
 	"Subsystem.h"
 	"Grid.h"
@@ -202,6 +203,7 @@
 	"Conveyor.h"
 	"Bomb.h"
 	"Held.h"
+	"Rocks.h"
 
 1330635262 /home/shalmezad/Programming/Git/GoldRush/lib/Subsystem.h
 	<SDL.h>
@@ -209,10 +211,10 @@
 1330634975 source:/home/shalmezad/Programming/Git/GoldRush/lib/Subsystem.cpp
 	"Subsystem.h"
 
-1330812995 source:/home/shalmezad/Programming/Git/GoldRush/lib/Grid.cpp
+1330872514 source:/home/shalmezad/Programming/Git/GoldRush/lib/Grid.cpp
 	"Grid.h"
 
-1330812699 /home/shalmezad/Programming/Git/GoldRush/lib/Grid.h
+1330872435 /home/shalmezad/Programming/Git/GoldRush/lib/Grid.h
 	<SDL.h>
 	<vector>
 	"Resource.h"
@@ -272,4 +274,18 @@
 
 1330806959 source:/home/shalmezad/Programming/Git/GoldRush/lib/Held.cpp
 	"Held.h"
+
+1330871868 source:/home/shalmezad/Programming/Git/GoldRush/lib/Rock.cpp
+	"Rock.h"
+
+1330869654 /home/shalmezad/Programming/Git/GoldRush/lib/Rock.h
+	<SDL.h>
+	"Resource.h"
+
+1330875467 source:/home/shalmezad/Programming/Git/GoldRush/lib/Rocks.cpp
+	"Rocks.h"
+
+1330872547 /home/shalmezad/Programming/Git/GoldRush/lib/Rocks.h
+	<vector>
+	"Rock.h"
 

@@ -9,6 +9,7 @@ Level::Level(SDL_Surface* s){
     m_Background = new Background();
     m_Conveyor = new Conveyor();
     m_Held = new Held();
+    m_Rocks = new Rocks();
 }
 
 Level::~Level(){
@@ -16,6 +17,7 @@ Level::~Level(){
     delete(m_Background);
     delete(m_Conveyor);
     delete(m_Held);
+    delete(m_Rocks);
 }
 void Level::tick(){
     handleEvents();
@@ -25,6 +27,7 @@ void Level::tick(){
 
 void Level::render(){
     m_Background->render(screen);
+    m_Rocks->render(screen);
     m_Grid->render(screen);
     m_Conveyor->render(screen);
     m_Held->render(screen);
@@ -67,7 +70,10 @@ void Level::handleEvents(){
                 if(m_Held->isHeld()){
                     if(m_Grid->play(m_Held->getGroup())){
                         m_Held->release();
-                        m_Grid->checkMatches();
+                        bool done = m_Rocks->crack(m_Grid->checkMatches());
+                        if(done){
+                            currentState = EXIT;
+                        }
                     }
                 }
             }

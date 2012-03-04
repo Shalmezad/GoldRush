@@ -21,10 +21,12 @@ Game::Game(){
     currentSystem = new Level(screen);
 
     Bomb::loadGraphics();
+    Rock::loadGraphics();
 }
 
 Game::~Game(){
     Bomb::unloadGraphics();
+    Rock::unloadGraphics();
 }
 
 void Game::run(){

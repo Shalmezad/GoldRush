@@ -8,6 +8,7 @@
 #include "Conveyor.h"
 #include "Bomb.h"
 #include "Held.h"
+#include "Rocks.h"
 
 class Level:public Subsystem{
 public:
@@ -25,6 +26,7 @@ private:
     Conveyor* m_Conveyor;
     SDL_Surface* screen;
     Held* m_Held;
+    Rocks* m_Rocks;
 
     void handleEvents();
     void render();

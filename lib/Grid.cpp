@@ -8,10 +8,14 @@ Grid::Grid(){
             bombgrid[i][j] = 0;
         }
     }
-    bombgrid[5][5] = 1;
-    bombgrid[5][6] = 2;
-    bombgrid[6][5] = 3;
-    bombgrid[6][6] = 4;
+    matchgrid = new bool*[8];
+    for(int a=0; a<8; a++){
+         matchgrid[a] = new bool[8];
+         for(int b=0;b<8; b++){
+            matchgrid[a][b] = false;
+         }
+
+    }
 }
 
 Grid::~Grid(){
@@ -43,38 +47,37 @@ int Grid::round(double b){
     }
 }
 
-void Grid::checkMatches(){
-    bool matches[8][8];
+bool** Grid::checkMatches(){
     for(int i=0; i<8; i++){
         for(int j=0; j<8; j++){
-            matches[i][j] = false;
+            matchgrid[i][j] = false;
         }
     }
 
-    //check horizontal matches
+    //check horizontal matchgrid
     for(int i=0; i<6; i++){
         for(int j=0; j<8; j++){
             if(bombgrid[i][j] != 0){
                 if(bombgrid[i][j] == bombgrid[i+1][j] &&
                    bombgrid[i][j] == bombgrid[i+2][j]){
-                    matches[i][j] = true;
-                    matches[i+1][j] = true;
-                    matches[i+2][j] = true;
+                    matchgrid[i][j] = true;
+                    matchgrid[i+1][j] = true;
+                    matchgrid[i+2][j] = true;
                 }
             }
         }
     }
 
 
-    //check vertical matches
+    //check vertical matchgrid
     for(int i=0; i<8; i++){
         for(int j=0; j<6; j++){
             if(bombgrid[i][j] != 0){
                 if(bombgrid[i][j] == bombgrid[i][j+1] &&
                    bombgrid[i][j] == bombgrid[i][j+2]){
-                    matches[i][j] = true;
-                    matches[i][j+1] = true;
-                    matches[i][j+2] = true;
+                    matchgrid[i][j] = true;
+                    matchgrid[i][j+1] = true;
+                    matchgrid[i][j+2] = true;
                 }
             }
         }
@@ -84,11 +87,12 @@ void Grid::checkMatches(){
     //TODO: use to remove rocks behind
     for(int i=0; i<8; i++){
         for(int j=0; j<8; j++){
-            if(matches[i][j]){
+            if(matchgrid[i][j]){
                 bombgrid[i][j] = 0;
             }
         }
     }
+    return matchgrid;
 
 }
 

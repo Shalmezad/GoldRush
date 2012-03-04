@@ -54,6 +54,10 @@
 		<Unit filename="lib/Level.h" />
 		<Unit filename="lib/Resource.cpp" />
 		<Unit filename="lib/Resource.h" />
+		<Unit filename="lib/Rock.cpp" />
+		<Unit filename="lib/Rock.h" />
+		<Unit filename="lib/Rocks.cpp" />
+		<Unit filename="lib/Rocks.h" />
 		<Unit filename="lib/Subsystem.cpp" />
 		<Unit filename="lib/Subsystem.h" />
 		<Unit filename="main.cpp" />
@@ -66,12 +70,16 @@
 		<Unit filename="res/belt2-2.bmp" />
 		<Unit filename="res/belt2-3.bmp" />
 		<Unit filename="res/belt2-4.bmp" />
+		<Unit filename="res/bigrock1.bmp" />
+		<Unit filename="res/bigrock2.bmp" />
 		<Unit filename="res/bomb1.bmp" />
 		<Unit filename="res/bomb2.bmp" />
 		<Unit filename="res/bomb3.bmp" />
 		<Unit filename="res/bomb4.bmp" />
 		<Unit filename="res/grid.bmp" />
 		<Unit filename="res/over.bmp" />
+		<Unit filename="res/smallrock1.bmp" />
+		<Unit filename="res/smallrock2.bmp" />
 		<Extensions>
 			<code_completion />
 			<debugger />

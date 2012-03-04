@@ -5,6 +5,7 @@
 #include "Subsystem.h"
 #include "Level.h"
 #include "Bomb.h"
+#include "Rock.h"
 
 class Game{
 public:
