@@ -1,13 +1,36 @@
 #include "Rocks.h"
 
 Rocks::Rocks(){
+    bool hasRock[8][8];
+    for(int i=0; i<8; i++){
+        for(int j=0; j<8; j++){
+            hasRock[i][j] = false;
+        }
+    }
 
-    Rock* c;
-    for(int a=0; a<8; a++){
-        for(int b=0; b<8; b++){
-            if(a%2 == 0 && b%2 == 0){
-                c = new Rock(1,a,b);
-                rockHolder.push_back(c);
+    //add big rocks
+    for(int i=0; i<7; i++){
+        for(int j=0; j<7; j++){
+            int a = rand() % 3 + 1;
+            if(a == 1){
+                a = rand()%2 + 1;
+                Rock* temprock = new Rock(a,i,j);
+                rockHolder.push_back(temprock);
+                hasRock[i][j] = true;
+                hasRock[i+1][j] = true;
+                hasRock[i][j+1] = true;
+                hasRock[i+1][j+1] = true;
+            }
+        }
+    }
+    //finally, small rocks
+
+    for(int i=0; i<8; i++){
+        for(int j=0; j<8; j++){
+            if(!hasRock[i][j]){
+                int a = rand() % 2 + 3;
+                Rock* temprock = new Rock(a,i,j);
+                rockHolder.push_back(temprock);
             }
         }
     }
