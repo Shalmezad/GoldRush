@@ -13,8 +13,8 @@
 	<File name="lib/Bomb.h" open="0" top="0" tabpos="10">
 		<Cursor position="126" topLine="0" />
 	</File>
-	<File name="lib/Bombgroup.cpp" open="0" top="0" tabpos="3">
-		<Cursor position="1546" topLine="55" />
+	<File name="lib/Bombgroup.cpp" open="1" top="1" tabpos="11">
+		<Cursor position="720" topLine="9" />
 	</File>
 	<File name="lib/Bombgroup.h" open="0" top="0" tabpos="9">
 		<Cursor position="510" topLine="1" />
@@ -44,7 +44,7 @@
 		<Cursor position="88" topLine="0" />
 	</File>
 	<File name="lib/Level.cpp" open="1" top="0" tabpos="6">
-		<Cursor position="1946" topLine="53" />
+		<Cursor position="2104" topLine="44" />
 	</File>
 	<File name="lib/Level.h" open="1" top="0" tabpos="7">
 		<Cursor position="195" topLine="0" />
@@ -56,13 +56,13 @@
 		<Cursor position="82" topLine="0" />
 	</File>
 	<File name="lib/Rock.cpp" open="1" top="0" tabpos="4">
-		<Cursor position="1774" topLine="53" />
+		<Cursor position="1774" topLine="18" />
 	</File>
 	<File name="lib/Rock.h" open="1" top="0" tabpos="5">
 		<Cursor position="51" topLine="0" />
 	</File>
-	<File name="lib/Rocks.cpp" open="1" top="1" tabpos="2">
-		<Cursor position="178" topLine="0" />
+	<File name="lib/Rocks.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="299" topLine="0" />
 	</File>
 	<File name="lib/Rocks.h" open="1" top="0" tabpos="3">
 		<Cursor position="167" topLine="0" />

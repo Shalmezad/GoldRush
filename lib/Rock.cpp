@@ -1,37 +1,41 @@
 #include "Rock.h"
 
-SDL_Surface* Rock::bigrock1 = NULL;
-SDL_Surface* Rock::bigrock2 = NULL;
+SDL_Surface* Rock::bigrock1_1 = NULL;
+SDL_Surface* Rock::bigrock1_2 = NULL;
+SDL_Surface* Rock::bigrock1_3 = NULL;
+SDL_Surface* Rock::bigrock1_4 = NULL;
+SDL_Surface* Rock::bigrock2_1 = NULL;
+SDL_Surface* Rock::bigrock2_2 = NULL;
+SDL_Surface* Rock::bigrock2_3 = NULL;
+SDL_Surface* Rock::bigrock2_4 = NULL;
 SDL_Surface* Rock::smallrock1 = NULL;
 SDL_Surface* Rock::smallrock2 = NULL;
 
 void Rock::loadGraphics(){
-    bigrock1 = Resource::loadGraphic("res/bigrock1.bmp");
-    bigrock2 = Resource::loadGraphic("res/bigrock2.bmp");
+    bigrock1_1 = Resource::loadGraphic("res/bigrock1-1.bmp");
+    bigrock1_2 = Resource::loadGraphic("res/bigrock1-2.bmp");
+    bigrock1_3 = Resource::loadGraphic("res/bigrock1-3.bmp");
+    bigrock1_4 = Resource::loadGraphic("res/bigrock1-4.bmp");
+    bigrock2_1 = Resource::loadGraphic("res/bigrock2-1.bmp");
+    bigrock2_2 = Resource::loadGraphic("res/bigrock2-2.bmp");
+    bigrock2_3 = Resource::loadGraphic("res/bigrock2-3.bmp");
+    bigrock2_4 = Resource::loadGraphic("res/bigrock2-4.bmp");
     smallrock1 = Resource::loadGraphic("res/smallrock1.bmp");
     smallrock2 = Resource::loadGraphic("res/smallrock2.bmp");
 }
 
 void Rock::unloadGraphics(){
-    SDL_FreeSurface(bigrock1);
-    SDL_FreeSurface(bigrock2);
+    SDL_FreeSurface(bigrock1_1);
+    SDL_FreeSurface(bigrock1_2);
+    SDL_FreeSurface(bigrock1_3);
+    SDL_FreeSurface(bigrock1_4);
+    SDL_FreeSurface(bigrock2_1);
+    SDL_FreeSurface(bigrock2_2);
+    SDL_FreeSurface(bigrock2_3);
+    SDL_FreeSurface(bigrock2_4);
     SDL_FreeSurface(smallrock1);
     SDL_FreeSurface(smallrock2);
 }
-
-/*
-
-    int type;
-    int xgrid;
-    int ygrid;
-    int health;
-
-    Rock(int t, int x, int y);
-    void render(SDL_Surface* screen);
-    bool crack(int x, int y);
-    bool isAlive();
-
-*/
 
 
 Rock::Rock(int t, int x, int y){
@@ -52,10 +56,24 @@ void Rock::render(SDL_Surface* screen){
     pos.y = 80 + ygrid * 40;
     switch(type){
         case 1:
-            SDL_BlitSurface(bigrock1, NULL, screen, &pos);
+            if(health==4)
+                SDL_BlitSurface(bigrock1_1, NULL, screen, &pos);
+            if(health==3)
+                SDL_BlitSurface(bigrock1_2, NULL, screen, &pos);
+            if(health==2)
+                SDL_BlitSurface(bigrock1_3, NULL, screen, &pos);
+            if(health==1)
+                SDL_BlitSurface(bigrock1_4, NULL, screen, &pos);
             break;
         case 2:
-            SDL_BlitSurface(bigrock2, NULL, screen, &pos);
+            if(health==4)
+                SDL_BlitSurface(bigrock2_1, NULL, screen, &pos);
+            if(health==3)
+                SDL_BlitSurface(bigrock2_2, NULL, screen, &pos);
+            if(health==2)
+                SDL_BlitSurface(bigrock2_3, NULL, screen, &pos);
+            if(health==1)
+                SDL_BlitSurface(bigrock2_4, NULL, screen, &pos);
             break;
         case 3:
             SDL_BlitSurface(smallrock1, NULL, screen, &pos);

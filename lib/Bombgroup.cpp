@@ -30,7 +30,7 @@ Bombgroup::Bombgroup(int type){
 }
 
 void Bombgroup::randomBomb(){
-    int a = rand() % 4 + 1;
+    int a = rand() % 3 + 1;
     Bomb* b = new Bomb(a);
     bombs.push_back(b);
 }
