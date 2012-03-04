@@ -42,10 +42,16 @@ void Game::run(){
             currentState = currentSystem->checkState();
             //TODO: change currentSystem to match current state
             //TODO: delete currentSystem before re-pointing pointer
-            if(currentState == EXIT){
+            if(currentState == LEVEL_CHANGE){
+                delete currentSystem;
+                currentSystem = new Level(screen);
+                currentState = LEVEL;
+            }
+            else if(currentState == EXIT){
                 running = false;
             }
         }
+        //but, just because it's the same...
     }
 
     SDL_Quit();

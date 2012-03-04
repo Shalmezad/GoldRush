@@ -6,6 +6,7 @@
     enum State{
         MAIN_MENU,
         LEVEL,
+        LEVEL_CHANGE,
         HIGHSCORE,
         EXIT
     };

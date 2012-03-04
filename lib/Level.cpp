@@ -75,7 +75,7 @@ void Level::handleEvents(){
                         m_Held->release();
                         bool done = m_Rocks->crack(m_Grid->checkMatches());
                         if(done){
-                            currentState = EXIT;
+                            currentState = LEVEL_CHANGE;
                         }
                     }
                 }
