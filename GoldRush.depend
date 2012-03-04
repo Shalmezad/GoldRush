@@ -193,10 +193,10 @@
 1330635734 source:/home/shalmezad/Programming/Git/GoldRush/main.cpp
 	"lib/Game.h"
 
-1330897045 source:/home/shalmezad/Programming/Git/GoldRush/lib/Level.cpp
+1330900510 source:/home/shalmezad/Programming/Git/GoldRush/lib/Level.cpp
 	"Level.h"
 
-1330897013 /home/shalmezad/Programming/Git/GoldRush/lib/Level.h
+1330900939 /home/shalmezad/Programming/Git/GoldRush/lib/Level.h
 	<SDL.h>
 	"Subsystem.h"
 	"Grid.h"
@@ -206,6 +206,7 @@
 	"Held.h"
 	"Rocks.h"
 	"Score.h"
+	"Resource.h"
 
 1330893311 /home/shalmezad/Programming/Git/GoldRush/lib/Subsystem.h
 	<SDL.h>
@@ -285,7 +286,7 @@
 	<SDL.h>
 	"Resource.h"
 
-1330893487 source:/home/shalmezad/Programming/Git/GoldRush/lib/Rocks.cpp
+1330898948 source:/home/shalmezad/Programming/Git/GoldRush/lib/Rocks.cpp
 	"Rocks.h"
 
 1330872547 /home/shalmezad/Programming/Git/GoldRush/lib/Rocks.h

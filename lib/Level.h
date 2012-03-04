@@ -10,6 +10,7 @@
 #include "Held.h"
 #include "Rocks.h"
 #include "Score.h"
+#include "Resource.h"
 
 class Level:public Subsystem{
 public:
@@ -26,8 +27,11 @@ private:
     Background* m_Background;
     Conveyor* m_Conveyor;
     SDL_Surface* screen;
+    SDL_Surface* boom;
     Held* m_Held;
     Rocks* m_Rocks;
+    bool gameDone;
+    int explosionTick;
 
     void handleEvents();
     void render();

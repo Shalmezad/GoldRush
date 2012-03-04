@@ -1,6 +1,7 @@
 #include "Rocks.h"
 
 Rocks::Rocks(){
+    //make a boolean array to make sure every spot has a rock!
     bool hasRock[8][8];
     for(int i=0; i<8; i++){
         for(int j=0; j<8; j++){
@@ -23,8 +24,9 @@ Rocks::Rocks(){
             }
         }
     }
-    //finally, small rocks
 
+    //finally, small rocks
+    //place them wherever there is no rock
     for(int i=0; i<8; i++){
         for(int j=0; j<8; j++){
             if(!hasRock[i][j]){

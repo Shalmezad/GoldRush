@@ -10,6 +10,9 @@ Level::Level(SDL_Surface* s){
     m_Conveyor = new Conveyor();
     m_Held = new Held();
     m_Rocks = new Rocks();
+    gameDone = false;
+    explosionTick = 1;
+    boom = Resource::loadGraphic("res/boom.bmp");
 }
 
 Level::~Level(){
@@ -18,14 +21,34 @@ Level::~Level(){
     delete(m_Conveyor);
     delete(m_Held);
     delete(m_Rocks);
+    SDL_FreeSurface(boom);
 }
 void Level::tick(){
     handleEvents();
-    if(m_Conveyor->tick()){
-        //Game over
-        currentState = EXIT;
+    if(!gameDone){
+        if(m_Conveyor->tick()){
+            //Game over
+            //currentState = EXIT;
+            gameDone = true;
+        }
     }
     render();
+    if(gameDone){
+        explosionTick += 3;
+        if(explosionTick>=255){
+            currentState = EXIT;
+        }
+        else{
+            //explode!
+            //SDL_FillRect(screen , NULL , SDL_MapRGBA(screen->format , 255, 255 , 255, explosionTick ) );
+            for(int a=0; a<explosionTick/3; a++){
+                SDL_BlitSurface(boom, NULL, screen, NULL);
+            }
+        }
+    }
+    SDL_Flip(screen);
+
+    SDL_FillRect(screen, NULL, SDL_MapRGB(screen->format, 0, 220, 250));
 }
 
 void Level::render(){
@@ -36,9 +59,6 @@ void Level::render(){
     m_Conveyor->render(screen);
     m_Held->render(screen);
 
-    SDL_Flip(screen);
-
-    SDL_FillRect(screen, NULL, SDL_MapRGB(screen->format, 0, 220, 250));
 }
 
 void Level::handleEvents(){
