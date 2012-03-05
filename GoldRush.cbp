@@ -35,6 +35,9 @@
 		<Linker>
 			<Add option="`sdl-config --libs`" />
 			<Add option="-lSDL_image" />
+			<Add option="-lsfml-graphics" />
+			<Add option="-lsfml-window" />
+			<Add option="-lsfml-system" />
 		</Linker>
 		<Unit filename="lib/Background.cpp" />
 		<Unit filename="lib/Background.h" />
@@ -76,6 +79,7 @@
 		<Unit filename="res/bomb2.bmp" />
 		<Unit filename="res/bomb3.bmp" />
 		<Unit filename="res/bomb4.bmp" />
+		<Unit filename="res/boom.bmp" />
 		<Unit filename="res/box.bmp" />
 		<Unit filename="res/grid.bmp" />
 		<Unit filename="res/over.bmp" />

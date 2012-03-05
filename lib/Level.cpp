@@ -2,8 +2,8 @@
 
 
 
-Level::Level(SDL_Surface* s){
-    screen = s;
+Level::Level(sf::RenderWindow* app){
+    App = app;
     currentState = LEVEL;
     m_Grid = new Grid();
     m_Background = new Background();
@@ -62,6 +62,7 @@ void Level::render(){
 }
 
 void Level::handleEvents(){
+    /*
     SDL_Event event;
     while(SDL_PollEvent(&event)){
         if(event.type == SDL_QUIT){
@@ -101,6 +102,13 @@ void Level::handleEvents(){
                     }
                 }
             }
+        }
+    }
+    */
+    sf::Event Event;
+    while(App.GetEvent(Event)){
+        if(Event.Type == sf::Event::Close){
+            currentState = EXIT;
         }
     }
 }

@@ -2,6 +2,8 @@
 #define _LEVEL_H_
 
 #include <SDL.h>
+#include <SFML/Graphics.hpp>
+#include <SFML/Window.hpp>
 #include "Subsystem.h"
 #include "Grid.h"
 #include "Background.h"
@@ -14,7 +16,7 @@
 
 class Level:public Subsystem{
 public:
-    Level(SDL_Surface* s);
+    Level(sf::RenderWindow* app);
     ~Level();
 
     virtual void tick();
@@ -22,6 +24,7 @@ public:
     virtual int stateParam();
 
 private:
+    sf::RenderWindow* App;
     State currentState;
     Grid* m_Grid;
     Background* m_Background;

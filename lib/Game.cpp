@@ -2,23 +2,9 @@
 
 
 Game::Game(){
-
-
-    if ( SDL_Init( SDL_INIT_VIDEO ) < 0 )
-    {
-        throw "Could not initialize SDL";
-    }
-
-    screen = SDL_SetVideoMode(800, 600, 16, SDL_HWSURFACE|SDL_DOUBLEBUF);
-    if ( !screen )
-    {
-        throw "Unable to create the window";
-    }
-
-    SDL_WM_SetCaption("GoldRush",0);
-
+    App->Create(sf::VideoMode(800, 600, 32), "SFML Graphics");
     currentState = LEVEL;
-    currentSystem = new Level(screen);
+    currentSystem = new Level(App);
 
     Bomb::loadGraphics();
     Rock::loadGraphics();
@@ -46,7 +32,7 @@ void Game::run(){
             //TODO: delete currentSystem before re-pointing pointer
             if(currentState == LEVEL_CHANGE){
                 delete currentSystem;
-                currentSystem = new Level(screen);
+                currentSystem = new Level(App);
                 currentState = LEVEL;
             }
             else if(currentState == EXIT){

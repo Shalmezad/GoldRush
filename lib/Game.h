@@ -2,6 +2,8 @@
 #define _GAME_H_
 
 #include <SDL.h>
+#include <SFML/Graphics.hpp>
+#include <SFML/Window.hpp>
 #include "Subsystem.h"
 #include "Level.h"
 #include "Bomb.h"
@@ -15,6 +17,7 @@ public:
     void run();
 
 private:
+    sf::RenderWindow* App;
     SDL_Surface* screen;
     SDL_Surface* bmp;
     State currentState;

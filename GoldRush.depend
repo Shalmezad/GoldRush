@@ -1,9 +1,11 @@
 # depslib dependency file v1.0
-1330896996 source:/home/shalmezad/Programming/Git/GoldRush/lib/Game.cpp
+1330915088 source:/home/shalmezad/Programming/Git/GoldRush/lib/Game.cpp
 	"Game.h"
 
-1330897020 /home/shalmezad/Programming/Git/GoldRush/lib/Game.h
+1330915071 /home/shalmezad/Programming/Git/GoldRush/lib/Game.h
 	<SDL.h>
+	<SFML/Graphics.hpp>
+	<SFML/Window.hpp>
 	"Subsystem.h"
 	"Level.h"
 	"Bomb.h"
@@ -193,11 +195,13 @@
 1330635734 source:/home/shalmezad/Programming/Git/GoldRush/main.cpp
 	"lib/Game.h"
 
-1330900510 source:/home/shalmezad/Programming/Git/GoldRush/lib/Level.cpp
+1330904552 source:/home/shalmezad/Programming/Git/GoldRush/lib/Level.cpp
 	"Level.h"
 
-1330900939 /home/shalmezad/Programming/Git/GoldRush/lib/Level.h
+1330915389 /home/shalmezad/Programming/Git/GoldRush/lib/Level.h
 	<SDL.h>
+	<SFML/Graphics.hpp>
+	<SFML/Window.hpp>
 	"Subsystem.h"
 	"Grid.h"
 	"Background.h"
