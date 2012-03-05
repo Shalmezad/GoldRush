@@ -26,7 +26,7 @@ Bombgroup::Bombgroup(int type){
     for(int i=0; i<numBombs; i++){
         randomBomb();   //add random bomb to array
     }
-    overgraphic = Resource::loadGraphic("res/over.bmp");
+    overgraphic.SetImage(Resource::loadGraphic("res/over.bmp"));
 }
 
 void Bombgroup::randomBomb(){
@@ -53,18 +53,16 @@ bool Bombgroup::checkCollision(int px, int py){
     return flag;
 }
 
-void Bombgroup::renderOver(SDL_Surface* screen){
+void Bombgroup::renderOver(sf::RenderWindow* App){
     for(int a=0; a<bombs.size(); a++){
         int x = bombs[a]->getX();
         int y = bombs[a]->getY();
         x = round(x/40.0) * 40.0;
         y = round(y/40.0) * 40.0;
-        SDL_Rect pos;
-        pos.x = x;
-        pos.y = y;
+        overgraphic.SetPosition(x,y);
         if(x>=200 && x<520){
             if(y>=80 && y<400){
-                SDL_BlitSurface(overgraphic, NULL, screen, &pos);
+                App->Draw(overgraphic);
             }
         }
     }
@@ -132,11 +130,9 @@ void Bombgroup::rotate(){
 }
 
 Bombgroup::~Bombgroup(){
-    //TODO: remove vector, and bombs in vector
     for(int a=0; a<bombs.size(); a++){
         delete(bombs[a]);
     }
-    SDL_FreeSurface(overgraphic);
 }
 
 
@@ -204,14 +200,14 @@ void Bombgroup::move(int x, int y){
     }
 }
 
-void Bombgroup::render(SDL_Surface* screen){
-    render(screen, xpos, ypos);
+void Bombgroup::render(sf::RenderWindow* App){
+    render(App, xpos, ypos);
 }
 
-void Bombgroup::render(SDL_Surface* screen, int x, int y){
+void Bombgroup::render(sf::RenderWindow* App, int x, int y){
     move(x,y);
     for(int a=0; a<bombs.size(); a++){
-        bombs[a]->render(screen);
+        bombs[a]->render(App);
     }
 }
 
