@@ -3,17 +3,29 @@
 const int ANIM_DELAY = 5;
 
 Conveyor::Conveyor(){
-    down_graphic1 = Resource::loadGraphic("res/belt1-1.bmp");
-    down_graphic2 = Resource::loadGraphic("res/belt1-2.bmp");
-    down_graphic3 = Resource::loadGraphic("res/belt1-3.bmp");
-    down_graphic4 = Resource::loadGraphic("res/belt1-4.bmp");
+    down_graphic1.SetImage(Resource::loadGraphic("res/belt1-1.bmp"));
+    down_graphic2.SetImage(Resource::loadGraphic("res/belt1-2.bmp"));
+    down_graphic3.SetImage(Resource::loadGraphic("res/belt1-3.bmp"));
+    down_graphic4.SetImage(Resource::loadGraphic("res/belt1-4.bmp"));
 
-    right_graphic1 = Resource::loadGraphic("res/belt2-1.bmp");
-    right_graphic2 = Resource::loadGraphic("res/belt2-2.bmp");
-    right_graphic3 = Resource::loadGraphic("res/belt2-3.bmp");
-    right_graphic4 = Resource::loadGraphic("res/belt2-4.bmp");
+    down_graphic1.SetPosition(20,0);
+    down_graphic2.SetPosition(20,0);
+    down_graphic3.SetPosition(20,0);
+    down_graphic4.SetPosition(20,0);
 
-    endbox = Resource::loadGraphic("res/box.bmp");
+    right_graphic1.SetImage(Resource::loadGraphic("res/belt2-1.bmp"));
+    right_graphic2.SetImage(Resource::loadGraphic("res/belt2-2.bmp"));
+    right_graphic3.SetImage(Resource::loadGraphic("res/belt2-3.bmp"));
+    right_graphic4.SetImage(Resource::loadGraphic("res/belt2-4.bmp"));
+
+    right_graphic1.SetPosition(20,420);
+    right_graphic2.SetPosition(20,420);
+    right_graphic3.SetPosition(20,420);
+    right_graphic4.SetPosition(20,420);
+
+    endbox.SetImage(Resource::loadGraphic("res/box.bmp"));
+
+    endbox.SetPosition(520,420);
 
     spawn_tick = 0;
     anim_state = 1;
@@ -21,17 +33,6 @@ Conveyor::Conveyor(){
 }
 
 Conveyor::~Conveyor(){
-    SDL_FreeSurface(down_graphic1);
-    SDL_FreeSurface(down_graphic2);
-    SDL_FreeSurface(down_graphic3);
-    SDL_FreeSurface(down_graphic4);
-
-    SDL_FreeSurface(right_graphic1);
-    SDL_FreeSurface(right_graphic2);
-    SDL_FreeSurface(right_graphic3);
-    SDL_FreeSurface(right_graphic4);
-
-    SDL_FreeSurface(endbox);
 }
 
 Bombgroup* Conveyor::checkClick(int xp, int yp){
@@ -86,30 +87,25 @@ bool Conveyor::tick(){
     return dead;
 }
 
-void Conveyor::render(SDL_Surface* screen){
-    //display belts
-    SDL_Rect belt1;
-    belt1.x = 20;
-    belt1.y = 0;
-    SDL_Rect belt2;
-    belt2.x = 20;
-    belt2.y = 420;
+void Conveyor::render(sf::RenderWindow* App){
     if(anim_state == 1){
-        SDL_BlitSurface(down_graphic1, NULL, screen, &belt1);
-        SDL_BlitSurface(right_graphic1, NULL, screen, &belt2);
+        App->Draw(down_graphic1);
+        App->Draw(right_graphic1);
     }
     if(anim_state == 2){
-        SDL_BlitSurface(down_graphic2, NULL, screen, &belt1);
-        SDL_BlitSurface(right_graphic2, NULL, screen, &belt2);
+        App->Draw(down_graphic1);
+        App->Draw(right_graphic1);
     }
     if(anim_state == 3){
-        SDL_BlitSurface(down_graphic3, NULL, screen, &belt1);
-        SDL_BlitSurface(right_graphic3, NULL, screen, &belt2);
+        App->Draw(down_graphic1);
+        App->Draw(right_graphic1);
     }
     if(anim_state == 4){
-        SDL_BlitSurface(down_graphic4, NULL, screen, &belt1);
-        SDL_BlitSurface(right_graphic4, NULL, screen, &belt2);
+        App->Draw(down_graphic1);
+        App->Draw(right_graphic1);
     }
+
+    //TODO: move anim_tick to tick function...
     anim_tick++;
     if(anim_tick>ANIM_DELAY){
         anim_tick = 0;
@@ -119,16 +115,12 @@ void Conveyor::render(SDL_Surface* screen){
         }
     }
 
-    //display box
-    SDL_Rect boxpos;
-    boxpos.x = 520;
-    boxpos.y = 420;
 
-    SDL_BlitSurface(endbox, NULL,screen, &boxpos);
+    App->Draw(endbox);
 
     //display bomb groups
     for(int a=0; a<bombs.size(); a++){
-        bombs[a]->render(screen);
+        bombs[a]->render(App);
     }
 
 }

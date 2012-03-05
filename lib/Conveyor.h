@@ -1,7 +1,7 @@
 #ifndef _CONVEYOR_H_
 #define _CONVEYOR_H_
 
-#include <SDL.h>
+#include <SFML/Graphics.hpp>
 #include <vector>
 #include <iostream>
 #include "Bombgroup.h"
@@ -11,21 +11,21 @@ class Conveyor{
 public:
     Conveyor();
     ~Conveyor();
-    void render(SDL_Surface* screen);
+    void render(sf::RenderWindow* App);
     bool tick();
     Bombgroup* checkClick(int xp, int yp);
 private:
-    SDL_Surface* down_graphic1;
-    SDL_Surface* down_graphic2;
-    SDL_Surface* down_graphic3;
-    SDL_Surface* down_graphic4;
+    sf::Sprite down_graphic1;
+    sf::Sprite down_graphic2;
+    sf::Sprite down_graphic3;
+    sf::Sprite down_graphic4;
 
-    SDL_Surface* right_graphic1;
-    SDL_Surface* right_graphic2;
-    SDL_Surface* right_graphic3;
-    SDL_Surface* right_graphic4;
+    sf::Sprite right_graphic1;
+    sf::Sprite right_graphic2;
+    sf::Sprite right_graphic3;
+    sf::Sprite right_graphic4;
 
-    SDL_Surface* endbox;
+    sf::Sprite endbox;
 
     std::vector<Bombgroup*> bombs;
 

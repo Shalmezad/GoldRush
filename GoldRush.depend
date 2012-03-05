@@ -248,8 +248,8 @@
 	"begin_code.h"
 	"close_code.h"
 
-1330891818 /home/shalmezad/Programming/Git/GoldRush/lib/Conveyor.h
-	<SDL.h>
+1330919412 /home/shalmezad/Programming/Git/GoldRush/lib/Conveyor.h
+	<SFML/Graphics.hpp>
 	<vector>
 	<iostream>
 	"Bombgroup.h"
@@ -258,7 +258,7 @@
 1330891923 source:/home/shalmezad/Programming/Git/GoldRush/lib/Conveyor.cpp
 	"Conveyor.h"
 
-1330895255 source:/home/shalmezad/Programming/Git/GoldRush/lib/Bombgroup.cpp
+1330918967 source:/home/shalmezad/Programming/Git/GoldRush/lib/Bombgroup.cpp
 	"Bombgroup.h"
 
 1330918970 /home/shalmezad/Programming/Git/GoldRush/lib/Bombgroup.h
