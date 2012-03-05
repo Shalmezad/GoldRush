@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="lib/Background.cpp" open="1" top="0" tabpos="7">
-		<Cursor position="51" topLine="0" />
+	<File name="lib/Background.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="212" topLine="0" />
 	</File>
-	<File name="lib/Background.h" open="0" top="0" tabpos="0">
-		<Cursor position="85" topLine="0" />
+	<File name="lib/Background.h" open="1" top="0" tabpos="2">
+		<Cursor position="226" topLine="0" />
 	</File>
-	<File name="lib/Bomb.cpp" open="0" top="0" tabpos="2">
-		<Cursor position="863" topLine="4" />
+	<File name="lib/Bomb.cpp" open="1" top="1" tabpos="5">
+		<Cursor position="253" topLine="2" />
 	</File>
 	<File name="lib/Bomb.h" open="0" top="0" tabpos="10">
 		<Cursor position="126" topLine="0" />
@@ -25,11 +25,11 @@
 	<File name="lib/Conveyor.h" open="0" top="0" tabpos="5">
 		<Cursor position="247" topLine="0" />
 	</File>
-	<File name="lib/Game.cpp" open="1" top="0" tabpos="2">
-		<Cursor position="1173" topLine="17" />
+	<File name="lib/Game.cpp" open="0" top="0" tabpos="2">
+		<Cursor position="528" topLine="16" />
 	</File>
-	<File name="lib/Game.h" open="1" top="0" tabpos="1">
-		<Cursor position="51" topLine="0" />
+	<File name="lib/Game.h" open="0" top="0" tabpos="1">
+		<Cursor position="289" topLine="0" />
 	</File>
 	<File name="lib/Grid.cpp" open="0" top="0" tabpos="9">
 		<Cursor position="1927" topLine="0" />
@@ -43,17 +43,17 @@
 	<File name="lib/Held.h" open="0" top="0" tabpos="8">
 		<Cursor position="88" topLine="0" />
 	</File>
-	<File name="lib/Level.cpp" open="1" top="1" tabpos="4">
-		<Cursor position="2988" topLine="100" />
+	<File name="lib/Level.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="218" topLine="2" />
 	</File>
-	<File name="lib/Level.h" open="1" top="0" tabpos="3">
-		<Cursor position="53" topLine="0" />
+	<File name="lib/Level.h" open="0" top="0" tabpos="3">
+		<Cursor position="585" topLine="15" />
 	</File>
-	<File name="lib/Resource.cpp" open="1" top="0" tabpos="6">
-		<Cursor position="138" topLine="0" />
+	<File name="lib/Resource.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="32" topLine="0" />
 	</File>
-	<File name="lib/Resource.h" open="1" top="0" tabpos="5">
-		<Cursor position="222" topLine="0" />
+	<File name="lib/Resource.h" open="1" top="0" tabpos="3">
+		<Cursor position="184" topLine="0" />
 	</File>
 	<File name="lib/Rock.cpp" open="0" top="0" tabpos="4">
 		<Cursor position="2783" topLine="78" />
@@ -80,6 +80,6 @@
 		<Cursor position="134" topLine="0" />
 	</File>
 	<File name="main.cpp" open="0" top="0" tabpos="1">
-		<Cursor position="146" topLine="0" />
+		<Cursor position="129" topLine="0" />
 	</File>
 </CodeBlocks_layout_file>

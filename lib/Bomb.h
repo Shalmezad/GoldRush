@@ -1,28 +1,27 @@
 #ifndef _BOMB_H_
 #define _BOMB_H_
 
-#include <SDL.h>
+#include <SFML/Graphics.hpp>
 #include "Resource.h"
 
 class Bomb{
 public:
     static void loadGraphics();
-    static void unloadGraphics();
+    static void render(int type, sf::RenderWindow* App, int x, int y);
 
     Bomb(int type);
-    void render(SDL_Surface* screen);
-    void render(SDL_Surface* screen, int x, int y);
+    void render(sf::RenderWindow* App);
+    void render(sf::RenderWindow* App, int x, int y);
     int getX(){return xpos;}
     int getY(){return ypos;}
     int getType(){return bombtype;}
     void move(int x, int y){xpos = x; ypos = y;}
-    static void render(int type, SDL_Surface* screen, int x, int y);
 
 private:
-    static SDL_Surface* bomb1;
-    static SDL_Surface* bomb2;
-    static SDL_Surface* bomb3;
-    static SDL_Surface* bomb4;
+    static sf::Sprite bombgraphic1;
+    static sf::Sprite bombgraphic2;
+    static sf::Sprite bombgraphic3;
+    static sf::Sprite bombgraphic4;
 
     int bombtype;
     int xpos;

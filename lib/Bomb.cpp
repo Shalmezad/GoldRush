@@ -1,10 +1,5 @@
 #include "Bomb.h"
 
-SDL_Surface* Bomb::bomb1 = NULL;
-SDL_Surface* Bomb::bomb2 = NULL;
-SDL_Surface* Bomb::bomb3 = NULL;
-SDL_Surface* Bomb::bomb4 = NULL;
-
 Bomb::Bomb(int type){
     xpos = 0;
     ypos = 0;
@@ -12,39 +7,37 @@ Bomb::Bomb(int type){
 }
 
 void Bomb::loadGraphics(){
-    bomb1 = Resource::loadGraphic("res/bomb1.bmp");
-    bomb2 = Resource::loadGraphic("res/bomb2.bmp");
-    bomb3 = Resource::loadGraphic("res/bomb3.bmp");
-    bomb4 = Resource::loadGraphic("res/bomb4.bmp");
+    bombgraphic1.SetImage(Resource::loadGraphic("res/bomb1.bmp"));
+    bombgraphic2.SetImage(Resource::loadGraphic("res/bomb2.bmp"));
+    bombgraphic3.SetImage(Resource::loadGraphic("res/bomb3.bmp"));
+    bombgraphic4.SetImage(Resource::loadGraphic("res/bomb4.bmp"));
 }
-void Bomb::unloadGraphics(){
-    SDL_FreeSurface(bomb1);
-    SDL_FreeSurface(bomb2);
-    SDL_FreeSurface(bomb3);
-    SDL_FreeSurface(bomb4);
-}
-void Bomb::render(SDL_Surface* screen){
-    render(screen, xpos, ypos);
-}
-void Bomb::render(SDL_Surface* screen, int x, int y){
-    xpos = x;
-    ypos = y;
-    Bomb::render(bombtype, screen, x, y);
-}
-void Bomb::render(int type, SDL_Surface* screen, int x, int y){
-    SDL_Rect pos;
-    pos.x = x;
-    pos.y = y;
+
+
+void Bomb::render(int type, sf::RenderWindow* App, int x, int y){
     if(type == 1){
-        SDL_BlitSurface(bomb1, NULL, screen, &pos);
+        bombgraphic1.SetPosition(x,y);
+        App->Draw(bombgraphic1);
     }
     else if(type == 2){
-        SDL_BlitSurface(bomb2, NULL, screen, &pos);
+        bombgraphic2.SetPosition(x,y);
+        App->Draw(bombgraphic2);
     }
     else if(type == 3){
-        SDL_BlitSurface(bomb3, NULL, screen, &pos);
+        bombgraphic3.SetPosition(x,y);
+        App->Draw(bombgraphic3);
     }
     else if(type == 4){
-        SDL_BlitSurface(bomb4, NULL, screen, &pos);
+        bombgraphic4.SetPosition(x,y);
+        App->Draw(bombgraphic4);
     }
+}
+
+void Bomb::render(sf::RenderWindow* App){
+    render(App, xpos, ypos);
+}
+void Bomb::render(sf::RenderWindow* App, int x, int y){
+    xpos = x;
+    ypos = y;
+    Bomb::render(bombtype, App, x, y);
 }

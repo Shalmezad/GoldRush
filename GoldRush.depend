@@ -239,7 +239,7 @@
 	<SFML/Graphics.hpp>
 	"Resource.h"
 
-1330643185 source:/home/shalmezad/Programming/Git/GoldRush/lib/Background.cpp
+1330917827 source:/home/shalmezad/Programming/Git/GoldRush/lib/Background.cpp
 	"Background.h"
 
 1310091670 /usr/include/SDL/SDL_image.h
@@ -271,8 +271,8 @@
 1330803488 source:/home/shalmezad/Programming/Git/GoldRush/lib/Bomb.cpp
 	"Bomb.h"
 
-1330811418 /home/shalmezad/Programming/Git/GoldRush/lib/Bomb.h
-	<SDL.h>
+1330918598 /home/shalmezad/Programming/Git/GoldRush/lib/Bomb.h
+	<SFML/Graphics.hpp>
 	"Resource.h"
 
 1330809940 /home/shalmezad/Programming/Git/GoldRush/lib/Held.h
