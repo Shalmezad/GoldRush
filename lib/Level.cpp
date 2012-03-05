@@ -12,7 +12,6 @@ Level::Level(sf::RenderWindow* app){
     m_Rocks = new Rocks();
     gameDone = false;
     explosionTick = 1;
-    boom = Resource::loadGraphic("res/boom.bmp");
 }
 
 Level::~Level(){
@@ -21,7 +20,6 @@ Level::~Level(){
     delete(m_Conveyor);
     delete(m_Held);
     delete(m_Rocks);
-    SDL_FreeSurface(boom);
 }
 void Level::tick(){
     handleEvents();
@@ -38,27 +36,11 @@ void Level::tick(){
         if(explosionTick>=255){
             currentState = EXIT;
         }
-        else{
-            //explode!
-            //SDL_FillRect(screen , NULL , SDL_MapRGBA(screen->format , 255, 255 , 255, explosionTick ) );
-            for(int a=0; a<explosionTick/3; a++){
-                SDL_BlitSurface(boom, NULL, screen, NULL);
-            }
-        }
     }
-    SDL_Flip(screen);
-
-    SDL_FillRect(screen, NULL, SDL_MapRGB(screen->format, 0, 220, 250));
 }
 
 void Level::render(){
-    m_Background->render(screen);
-    Score::render(screen);
-    m_Rocks->render(screen);
-    m_Grid->render(screen);
-    m_Conveyor->render(screen);
-    m_Held->render(screen);
-
+    //TODO: render the App window
 }
 
 void Level::handleEvents(){
@@ -106,9 +88,14 @@ void Level::handleEvents(){
     }
     */
     sf::Event Event;
-    while(App.GetEvent(Event)){
-        if(Event.Type == sf::Event::Close){
+    while(App->GetEvent(Event)){
+        if(Event.Type == sf::Event::Closed){
             currentState = EXIT;
+        }
+        else if(Event.Type == sf::Event::KeyReleased){
+            if(Event.Key.Code == sf::Key::Escape){
+                currentState = EXIT;
+            }
         }
     }
 }

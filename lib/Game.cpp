@@ -2,19 +2,14 @@
 
 
 Game::Game(){
-    App->Create(sf::VideoMode(800, 600, 32), "SFML Graphics");
+    //Create the game window
+    App->Create(sf::VideoMode(800, 600, 32), "GoldRush");
     currentState = LEVEL;
     currentSystem = new Level(App);
-
-    Bomb::loadGraphics();
-    Rock::loadGraphics();
-    Score::loadGraphics();
 }
 
 Game::~Game(){
-    Bomb::unloadGraphics();
-    Rock::unloadGraphics();
-    Score::unloadGraphics();
+
 }
 
 void Game::run(){
@@ -22,14 +17,13 @@ void Game::run(){
     while(running){
         //run current subsystem
         currentSystem->tick();
-        SDL_Delay(20);
+        //Delay
+        //TODO: lookup how to delay
 
         //check to make sure nothing has changed...
         if(currentSystem->checkState()!=currentState){
             //means we need to change
             currentState = currentSystem->checkState();
-            //TODO: change currentSystem to match current state
-            //TODO: delete currentSystem before re-pointing pointer
             if(currentState == LEVEL_CHANGE){
                 delete currentSystem;
                 currentSystem = new Level(App);
@@ -39,9 +33,10 @@ void Game::run(){
                 running = false;
             }
         }
-        //but, just because it's the same...
     }
 
-    SDL_Quit();
+
+    App->Close();
+
 
 }

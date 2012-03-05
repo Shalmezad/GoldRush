@@ -1,7 +1,6 @@
 #ifndef _LEVEL_H_
 #define _LEVEL_H_
 
-#include <SDL.h>
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 #include "Subsystem.h"
@@ -29,8 +28,6 @@ private:
     Grid* m_Grid;
     Background* m_Background;
     Conveyor* m_Conveyor;
-    SDL_Surface* screen;
-    SDL_Surface* boom;
     Held* m_Held;
     Rocks* m_Rocks;
     bool gameDone;

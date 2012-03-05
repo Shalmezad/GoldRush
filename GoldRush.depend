@@ -1,11 +1,9 @@
 # depslib dependency file v1.0
-1330915088 source:/home/shalmezad/Programming/Git/GoldRush/lib/Game.cpp
+1330915661 source:/home/shalmezad/Programming/Git/GoldRush/lib/Game.cpp
 	"Game.h"
 
-1330915071 /home/shalmezad/Programming/Git/GoldRush/lib/Game.h
-	<SDL.h>
+1330916395 /home/shalmezad/Programming/Git/GoldRush/lib/Game.h
 	<SFML/Graphics.hpp>
-	<SFML/Window.hpp>
 	"Subsystem.h"
 	"Level.h"
 	"Bomb.h"
@@ -195,11 +193,10 @@
 1330635734 source:/home/shalmezad/Programming/Git/GoldRush/main.cpp
 	"lib/Game.h"
 
-1330904552 source:/home/shalmezad/Programming/Git/GoldRush/lib/Level.cpp
+1330915819 source:/home/shalmezad/Programming/Git/GoldRush/lib/Level.cpp
 	"Level.h"
 
-1330915389 /home/shalmezad/Programming/Git/GoldRush/lib/Level.h
-	<SDL.h>
+1330916543 /home/shalmezad/Programming/Git/GoldRush/lib/Level.h
 	<SFML/Graphics.hpp>
 	<SFML/Window.hpp>
 	"Subsystem.h"
@@ -232,12 +229,14 @@
 1330643650 source:/home/shalmezad/Programming/Git/GoldRush/lib/Resource.cpp
 	"Resource.h"
 
-1330643617 /home/shalmezad/Programming/Git/GoldRush/lib/Resource.h
+1330917764 /home/shalmezad/Programming/Git/GoldRush/lib/Resource.h
 	<SDL.h>
 	<SDL_image.h>
+	<SFML/Graphics.hpp>
+	<SFML/Window.hpp>
 
-1330643192 /home/shalmezad/Programming/Git/GoldRush/lib/Background.h
-	<SDL.h>
+1330917792 /home/shalmezad/Programming/Git/GoldRush/lib/Background.h
+	<SFML/Graphics.hpp>
 	"Resource.h"
 
 1330643185 source:/home/shalmezad/Programming/Git/GoldRush/lib/Background.cpp
